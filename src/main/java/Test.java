@@ -20,8 +20,12 @@ public class Test {
             BufferedImage img = QrCodeGenWrapper.of("just for fun")
                     .setW(size)
                     .setH(size)
-//                    .setDetectImg("detect.png")
-                    .setDrawPreColor(0xff008e59)
+//                    .setDetectImg("/home/ht061/gocode/src/github.com/lurenjia528/zxingdemo/src/main/resources/detect.png") // 设置定位图标(角落图标)
+                    .setDrawPreColor(0xff0000ff)
+//                    .setDrawBgColor(0x00000000)
+//                    .setDetectOutColor(0xff00FF00)
+//                    .setDetectInColor(0x00000000)
+//                    .setDrawPreColor(0xff008e59)
 //                    .setDrawPreColor(0xff002fa7)
                     .setErrorCorrection(com.google.zxing.qrcode.decoder.ErrorCorrectionLevel.M)
                     .setLogoStyle(QrCodeOptions.LogoStyle.ROUND)
@@ -30,7 +34,9 @@ public class Test {
                     .setLogoRate(10)
                     .setDrawStyle(QrCodeOptions.DrawStyle.CIRCLE)
                     .setDrawEnableScale(true)
-                    .setBgImg("/home/ht061/ygt/code/zxingdemo/src/main/resources/bg.png")
+
+                    .setBgImg("/home/ht061/gocode/src/github.com/lurenjia528/zxingdemo/src/main/resources/bg.png")
+                    .setBgOpacity(0.8f) // 透明度
                     .asBufferedImage();
             ImageIO.write(img, "png", new File("src/main/resources/style.png"));
         } catch (IOException e) {
