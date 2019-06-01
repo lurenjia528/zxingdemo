@@ -20,7 +20,7 @@ public class Test {
             BufferedImage img = QrCodeGenWrapper.of("just for fun")
                     .setW(size)
                     .setH(size)
-//                    .setDetectImg("/home/ht061/gocode/src/github.com/lurenjia528/zxingdemo/src/main/resources/detect.png") // 设置定位图标(角落图标)
+                    .setDetectImg("detect.png") // 设置定位图标(角落图标)
                     .setDrawPreColor(0xff0000ff)
 //                    .setDrawBgColor(0x00000000)
 //                    .setDetectOutColor(0xff00FF00)
@@ -35,7 +35,7 @@ public class Test {
                     .setDrawStyle(QrCodeOptions.DrawStyle.CIRCLE)
                     .setDrawEnableScale(true)
 
-                    .setBgImg("/home/ht061/gocode/src/github.com/lurenjia528/zxingdemo/src/main/resources/bg.png")
+                    .setBgImg("bg.png")
                     .setBgOpacity(0.8f) // 透明度
                     .asBufferedImage();
             ImageIO.write(img, "png", new File("src/main/resources/style.png"));
